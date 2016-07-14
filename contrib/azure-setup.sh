@@ -146,7 +146,7 @@ createApplication() {
 
 createServicePrinciple() {
 	echo "==> Creating service principal"
-	azure ad sp create $azure_client_id
+	azure ad sp create -a $azure_client_id
 	if [ $? -ne 0 ]; then
 		echo "Error creating service principal: $azure_client_id"
 		exit 1
